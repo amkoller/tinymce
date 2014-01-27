@@ -24403,8 +24403,10 @@ define("tinymce/util/Quirks", [
 						e.preventDefault();
 
 						// Insert a BR before the text node this will prevent the containing element from being deleted/converted
+            /*
 						brElm = dom.create('br', {id: '__tmp'});
 						container.parentNode.insertBefore(brElm, container);
+            */
 
 						// Do the browser delete
 						editor.getDoc().execCommand(isDelete ? 'ForwardDelete' : 'Delete', false, null);

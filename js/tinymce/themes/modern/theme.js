@@ -341,6 +341,7 @@ tinymce.ThemeManager.add('modern', function(editor) {
 	 * @return {Object} Name/value object with theme data.
 	 */
 	function renderInlineUI() {
+    
 		var panel, inlineToolbarContainer;
 
 		if (settings.fixed_toolbar_container) {
@@ -382,7 +383,7 @@ tinymce.ThemeManager.add('modern', function(editor) {
 		function render() {
 			if (panel) {
 				if (!panel.visible()) {
-					show();
+					//show();
 				}
 
 				return;
@@ -415,7 +416,8 @@ tinymce.ThemeManager.add('modern', function(editor) {
 			panel.renderTo(inlineToolbarContainer || document.body).reflow();
 
 			addAccessibilityKeys(panel);
-			show();
+			//show();
+      hide();
 
 			editor.on('nodeChange', reposition);
 			editor.on('activate', show);
